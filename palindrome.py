@@ -1,14 +1,9 @@
 class Solution:
     def isPalindrome(self, x: int) -> bool:
         self.x = x
-        x = str(x).replace('', ' ').split()
-        newList = x[::-1]
-        for i in range(len(x)):
-            if x[i] == newList[i]:
-                continue
-            else:
-                return False
-            
+        x = str(x)
+        revX = x[::-1]
+        return x == revX            
 x = 121
 result = Solution().isPalindrome(x)
 if result is not False:
